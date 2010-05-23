@@ -1,0 +1,52 @@
+/**
+ * Simple example CSS file on how you can easily modify the look of
+ * the synDirectory listing. You can see the names of all the usable
+ * CSS classes if you view the source of your directory
+*/
+
+/* Basic look of the <table> element */
+.synTable {
+	font-family: "Times New Roman", sans-serif;
+	font-size: 15px;
+	border-collapse: collapse;
+}
+
+.synTable td {
+	font-family: Verdana, sans-serif;
+	font-size: 15px;
+}
+
+/* the topmost <td> element, with Filename: etc */
+.synTopTd {
+	padding: 3px;
+}
+
+/* 
+	What i do to get the even/odd look is i change the background
+	color for the synFolderTr0 and the synFileTr0 to one type of color.
+	And for the Tr1 classes i pick some other color.
+	
+	The program keeps track of which look to pick so no matter how many
+	folders or files you have, it will always be consistant.
+*/
+.synFolderTr0, .synFileTr0 {
+	background: #ddd;
+}
+
+.synFolderTr1, .synFileTr1 {
+	background: #fff;
+}
+
+/* padding for the <td> element for the files */
+.synFileTd {
+	padding: 3px;
+}
+
+/* padding for the <td> element for the folders */
+.synFolderTd {
+	padding: 3px;
+}
+
+.synFooterTd {
+	padding: 3px;
+}
