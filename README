@@ -1,0 +1,118 @@
+synDirectory (Simple yet nifty)
+Author: Ólafur Waage
+Email: olafurw@gmail.com
+
+This is a collection of php files (with images included) that enable
+you to display contents of a directory.
+
+It has added features like turning on and off displays for things like
+directories, files, file extensions and more.
+
+You can also select what filetypes you want only to see within your directory.
+
+It has some support for skinning (with css class names for most elements)
+
+And the index file is small (only 4 lines of actual code), so its very easy to
+have the index file generated on the fly
+
+There is also support for translation via the config.php file.
+
+If you have any questions, hit me up on my email.
+
+If you want further info on what has changed, check out the Changelog here below.
+
+-#-
+
+Changelog
+
+v1.0 - 23.05.2010 - waage
+# New
+- Uses the DirectoryIterator so PHP 5 is now required
+- The directory list now ignores "syn_style.css" if you want to have a .css within the directory
+
+# Changes
+- Cleaned up code, made more strict checks on if variables are set. For servers that run on PHP strict.
+- Code should also be more verbose in some places.
+- Simplified the index.php file
+- Removed all inline PHP code. For servers that do not have that feature.
+- Removed the lang.php file, you can now translate within the config file
+
+# Bugfix
+- Fixed a display bug when the server info was empty
+
+v0.2 - 15.04.2008 - waage
+# License change
+- Changed the license from GPL to MIT
+	This permits the use of this program within proprietary software.
+	
+# New features
+- Three new configuration options (via config.php)
+	The ability to hide the "Last Modified" row
+	The ability to hide the "Size" row
+	The ability to hide the directory statistics line at the bottom
+
+# Bugfix
+- The synDirectory.txt file wasnt hidden by default. It is now.
+
+v0.11a - 07.02.2008 - waage
+# Minifix
+- Fixed a small CSS issue with how the main table was displayed
+
+v0.11 - 03.02.2008 - waage
+# Bugfix
+- Removed the icon files from displaying like they should have if you are using
+the same location for them as the directory.
+
+v0.1 - 14.01.2008 - waage
+# New features
+- index.php shrunk in size to allow for autogereation
+- config.php created and added support in the main class for its elements
+	Ability to show files or not
+	To show directories or not
+	To show file extensions or not
+	To show only certain filetypes (ie. only mp3 and wmv files)
+
+- lang.php created, it contains an array element with the language as a key and the
+correct output as a value. The key to use is changed within the config.php file
+	Added the english language
+	Added the icelandic language
+
+# Improvments
+- Streamlined the code so the overall display proccess of the directory is much faster
+than the previous version. (by about 5 seconds on a 700 file directory)
+- Added a new byteConvert function so converting the filesize is faster and more accurate
+(thanks php.net)
+
+# Bugs fixed
+- Fixed a bug with sorting dates where one file for each day would have the wrong date
+
+v0.02
+  Fixed bugs while running under PHP 5
+
+v0.01
+	Initial release, code functional under current setup
+
+The MIT License
+	
+Copyright (c) 2008 Ólafur Waage
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
